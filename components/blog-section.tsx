@@ -124,7 +124,7 @@ export default function BlogSection() {
 
             <CardFooter>
               <Button
-                onClick={() => window.location.href = {post.slug}} 
+                onClick={() => window.location.href = post.slug} 
                 variant="link"
                 className="text-green-400 p-0 h-auto font-medium flex items-center gap-1 hover:text-green-300"
               >
