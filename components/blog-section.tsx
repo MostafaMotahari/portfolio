@@ -5,7 +5,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
-import Link from "next/link";
 
 interface BlogPost {
   title: string
@@ -125,13 +124,11 @@ export default function BlogSection() {
 
             <CardFooter>
               <Button
+                onClick={() => window.location.href = {post.slug}} 
                 variant="link"
                 className="text-green-400 p-0 h-auto font-medium flex items-center gap-1 hover:text-green-300"
-                asChild
               >
-                <Link href="{post.slug}">
-                  Read Article <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
+                Read Article <ArrowRight className="h-3 w-3 ml-1" />
               </Button>
             </CardFooter>
           </Card>
