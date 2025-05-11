@@ -84,12 +84,6 @@ export default function SkillsSection() {
       color: "bg-blue-600 text-blue-600",
     },
     {
-      name: "AWS",
-      category: "tool",
-      icon: <Cloud className="h-6 w-6" />,
-      color: "bg-yellow-500 text-yellow-500",
-    },
-    {
       name: "CI/CD",
       category: "tool",
       icon: <Workflow className="h-6 w-6" />,
@@ -108,19 +102,13 @@ export default function SkillsSection() {
       color: "bg-gray-500 text-gray-500",
     },
     {
-      name: "Microservices",
-      category: "framework",
-      icon: <Server className="h-6 w-6" />,
-      color: "bg-indigo-500 text-indigo-500",
-    },
-    {
       name: "Security",
       category: "tool",
       icon: <Shield className="h-6 w-6" />,
       color: "bg-emerald-500 text-emerald-500",
     },
     {
-      name: "Async IO",
+      name: "C++",
       category: "language",
       icon: <Cpu className="h-6 w-6" />,
       color: "bg-violet-500 text-violet-500",

@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Github, Linkedin, Send } from "lucide-react"
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
@@ -112,7 +112,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-medium">Email</h3>
-                <p className="text-sm text-gray-400">contact@pythondev.com</p>
+                <p className="text-sm text-gray-400">mostafamotahari2004@gmail.com</p>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-medium">GitHub</h3>
-                <p className="text-sm text-gray-400">github.com/pythondev</p>
+                <p className="text-sm text-gray-400">github.com/MostafaMotahari</p>
               </div>
             </div>
 
@@ -132,17 +132,17 @@ export default function ContactSection() {
               </div>
               <div>
                 <h3 className="font-medium">LinkedIn</h3>
-                <p className="text-sm text-gray-400">linkedin.com/in/pythondev</p>
+                <p className="text-sm text-gray-400">linkedin.com/in/MostafaMotahari</p>
               </div>
             </div>
 
             <div className="flex items-center gap-4">
               <div className="bg-gray-800 p-3 rounded-full">
-                <Twitter className="h-6 w-6 text-green-400" />
+                <Send className="h-6 w-6 text-green-400" />
               </div>
               <div>
-                <h3 className="font-medium">Twitter</h3>
-                <p className="text-sm text-gray-400">@pythondev</p>
+                <h3 className="font-medium">Telegram</h3>
+                <p className="text-sm text-gray-400">@Mousiol</p>
               </div>
             </div>
           </CardContent>
