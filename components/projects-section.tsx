@@ -119,13 +119,13 @@ export default function ProjectsSection() {
 
             <CardFooter className="flex gap-2">
               {project.github && (
-                <Button variant="outline" size="sm" className="gap-1">
+                <Button onClick={() => window.location.href = project.github} variant="outline" size="sm" className="gap-1">
                   <Github className="h-4 w-4" />
                   <span>Code</span>
                 </Button>
               )}
               {project.demo && (
-                <Button variant="outline" size="sm" className="gap-1">
+                <Button onClick={() => window.location.href = project.demo} variant="outline" size="sm" className="gap-1">
                   <ExternalLink className="h-4 w-4" />
                   <span>Demo</span>
                 </Button>

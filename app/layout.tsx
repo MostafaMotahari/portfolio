@@ -7,20 +7,9 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Mousiol Portfolio",
-  description: "Mousiol Portfolio showcasing Python backend development skills and projects",
-  generator: "Mousiol",
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
-  manifest: "/site.webmanifest",
+  title: "Python Backend Developer Portfolio",
+  description: "Portfolio showcasing Python backend development skills and projects",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
