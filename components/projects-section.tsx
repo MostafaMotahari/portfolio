@@ -21,57 +21,57 @@ export default function ProjectsSection() {
 
   const projects: Project[] = [
     {
-      title: "API Gateway Service",
+      title: "Certbot plugin for PowerDNS Admin API",
       description:
-        "A high-performance API gateway built with FastAPI that handles authentication, rate limiting, and request routing for a microservices architecture.",
-      technologies: ["Python", "FastAPI", "Redis", "Docker", "Kubernetes"],
-      github: "https://github.com/username/api-gateway",
-      image: "/placeholder.svg?height=200&width=400",
+        "A Python plugin for Certbot to perform DNS-01 challenges using the PowerDNS-Admin API.",
+      technologies: ["Python", "Certbot"],
+      github: "https://github.com/MostafaMotahari/certbot-dns-pdnsadmin",
+      image: "https://github.com/MostafaMotahari/certbot-dns-pdnsadmin/blob/master/images/cover.png?height=200&width=400",
       featured: true,
     },
-    {
-      title: "Data Processing Pipeline",
-      description: "A scalable ETL pipeline that processes terabytes of data using Python, Celery, and AWS services.",
-      technologies: ["Python", "Celery", "AWS Lambda", "S3", "DynamoDB"],
-      github: "https://github.com/username/data-pipeline",
-      image: "/placeholder.svg?height=200&width=400",
-      featured: true,
-    },
-    {
-      title: "E-commerce Backend",
-      description:
-        "A robust backend system for an e-commerce platform with inventory management, order processing, and payment integration.",
-      technologies: ["Django", "PostgreSQL", "Redis", "Stripe API", "Docker"],
-      github: "https://github.com/username/ecommerce-backend",
-      demo: "https://demo-ecommerce.example.com",
-      image: "/placeholder.svg?height=200&width=400",
-      featured: true,
-    },
-    {
-      title: "Real-time Chat Server",
-      description:
-        "A WebSocket-based chat server that supports thousands of concurrent connections with minimal latency.",
-      technologies: ["Python", "WebSockets", "Redis", "MongoDB", "Docker"],
-      github: "https://github.com/username/chat-server",
-      image: "/placeholder.svg?height=200&width=400",
-      featured: false,
-    },
-    {
-      title: "Content Management System",
-      description: "A headless CMS built with Django REST Framework that provides a flexible API for content delivery.",
-      technologies: ["Django", "DRF", "PostgreSQL", "AWS S3", "Docker"],
-      github: "https://github.com/username/headless-cms",
-      image: "/placeholder.svg?height=200&width=400",
-      featured: false,
-    },
-    {
-      title: "Machine Learning API",
-      description: "A REST API that serves machine learning models for sentiment analysis and text classification.",
-      technologies: ["Flask", "scikit-learn", "TensorFlow", "Docker", "AWS"],
-      github: "https://github.com/username/ml-api",
-      image: "/placeholder.svg?height=200&width=400",
-      featured: false,
-    },
+    // {
+    //   title: "Data Processing Pipeline",
+    //   description: "A scalable ETL pipeline that processes terabytes of data using Python, Celery, and AWS services.",
+    //   technologies: ["Python", "Celery", "AWS Lambda", "S3", "DynamoDB"],
+    //   github: "https://github.com/username/data-pipeline",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   featured: true,
+    // },
+    // {
+    //   title: "E-commerce Backend",
+    //   description:
+    //     "A robust backend system for an e-commerce platform with inventory management, order processing, and payment integration.",
+    //   technologies: ["Django", "PostgreSQL", "Redis", "Stripe API", "Docker"],
+    //   github: "https://github.com/username/ecommerce-backend",
+    //   demo: "https://demo-ecommerce.example.com",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   featured: true,
+    // },
+    // {
+    //   title: "Real-time Chat Server",
+    //   description:
+    //     "A WebSocket-based chat server that supports thousands of concurrent connections with minimal latency.",
+    //   technologies: ["Python", "WebSockets", "Redis", "MongoDB", "Docker"],
+    //   github: "https://github.com/username/chat-server",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   featured: false,
+    // },
+    // {
+    //   title: "Content Management System",
+    //   description: "A headless CMS built with Django REST Framework that provides a flexible API for content delivery.",
+    //   technologies: ["Django", "DRF", "PostgreSQL", "AWS S3", "Docker"],
+    //   github: "https://github.com/username/headless-cms",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   featured: false,
+    // },
+    // {
+    //   title: "Machine Learning API",
+    //   description: "A REST API that serves machine learning models for sentiment analysis and text classification.",
+    //   technologies: ["Flask", "scikit-learn", "TensorFlow", "Docker", "AWS"],
+    //   github: "https://github.com/username/ml-api",
+    //   image: "/placeholder.svg?height=200&width=400",
+    //   featured: false,
+    // },
   ]
 
   const displayedProjects = showAll ? projects : projects.filter((project) => project.featured)

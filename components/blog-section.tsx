@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
+import Link from "next/link";
 
 interface BlogPost {
   title: string
@@ -21,55 +22,55 @@ export default function BlogSection() {
 
   const blogPosts: BlogPost[] = [
     {
-      title: "Building Scalable APIs with FastAPI and PostgreSQL",
+      title: "DB Race Condition Errors, Silent Killer of DB Consistency",
       excerpt:
-        "Learn how to design and implement high-performance APIs that can handle millions of requests using FastAPI and PostgreSQL.",
-      date: "May 2, 2025",
-      readTime: "8 min read",
-      categories: ["FastAPI", "PostgreSQL", "API Design"],
-      slug: "building-scalable-apis",
+        "If you are a web-developer that works on simple and soft web projects, then probably you have never noticed about Database race conditions. First of all, let me talk a little about race conditions. What are they, how they happen and what should we do...",
+      date: "Jan 22, 2025",
+      readTime: "4 min read",
+      categories: ["Django", "PostgreSQL", "Race condition"],
+      slug: "https://blog.mousiol.ir/db-race-condition-errors-silent-killer-of-db-consistency",
       featured: true,
     },
     {
-      title: "Optimizing Python Performance: Profiling and Caching Strategies",
+      title: "Elegant Trick to Swap Variables Without Extra Memory",
       excerpt:
-        "Discover techniques to identify bottlenecks in your Python code and implement effective caching strategies to boost performance.",
-      date: "April 15, 2025",
-      readTime: "12 min read",
-      categories: ["Python", "Performance", "Caching"],
-      slug: "optimizing-python-performance",
+        "Imagine you are in C++ programming language exam session. You relaxed and answering the questions one after another. After a while you solved all the...",
+      date: "Jan 11, 2025",
+      readTime: "4 min read",
+      categories: ["Memory", "Tricks", "C++"],
+      slug: "https://blog.mousiol.ir/elegant-tricks-to-swap-variables-without-extra-memory",
       featured: true,
     },
-    {
-      title: "Containerization Best Practices for Python Applications",
-      excerpt:
-        "A comprehensive guide to containerizing Python applications with Docker, focusing on security, performance, and deployment strategies.",
-      date: "March 28, 2025",
-      readTime: "10 min read",
-      categories: ["Docker", "DevOps", "Python"],
-      slug: "containerization-best-practices",
-      featured: true,
-    },
-    {
-      title: "Implementing Event-Driven Architecture with Python and Kafka",
-      excerpt:
-        "How to design and build event-driven systems using Python, Kafka, and modern asynchronous programming techniques.",
-      date: "March 10, 2025",
-      readTime: "15 min read",
-      categories: ["Kafka", "Event-Driven", "Architecture"],
-      slug: "event-driven-architecture",
-      featured: false,
-    },
-    {
-      title: "Advanced Database Indexing Strategies for Django Applications",
-      excerpt:
-        "Learn how to optimize your Django ORM queries with advanced indexing techniques that can dramatically improve database performance.",
-      date: "February 22, 2025",
-      readTime: "9 min read",
-      categories: ["Django", "Databases", "Performance"],
-      slug: "database-indexing-strategies",
-      featured: false,
-    },
+    // {
+    //   title: "Containerization Best Practices for Python Applications",
+    //   excerpt:
+    //     "A comprehensive guide to containerizing Python applications with Docker, focusing on security, performance, and deployment strategies.",
+    //   date: "March 28, 2025",
+    //   readTime: "10 min read",
+    //   categories: ["Docker", "DevOps", "Python"],
+    //   slug: "containerization-best-practices",
+    //   featured: true,
+    // },
+    // {
+    //   title: "Implementing Event-Driven Architecture with Python and Kafka",
+    //   excerpt:
+    //     "How to design and build event-driven systems using Python, Kafka, and modern asynchronous programming techniques.",
+    //   date: "March 10, 2025",
+    //   readTime: "15 min read",
+    //   categories: ["Kafka", "Event-Driven", "Architecture"],
+    //   slug: "event-driven-architecture",
+    //   featured: false,
+    // },
+    // {
+    //   title: "Advanced Database Indexing Strategies for Django Applications",
+    //   excerpt:
+    //     "Learn how to optimize your Django ORM queries with advanced indexing techniques that can dramatically improve database performance.",
+    //   date: "February 22, 2025",
+    //   readTime: "9 min read",
+    //   categories: ["Django", "Databases", "Performance"],
+    //   slug: "database-indexing-strategies",
+    //   featured: false,
+    // },
   ]
 
   const displayedPosts = showAll ? blogPosts : blogPosts.filter((post) => post.featured)
@@ -126,8 +127,11 @@ export default function BlogSection() {
               <Button
                 variant="link"
                 className="text-green-400 p-0 h-auto font-medium flex items-center gap-1 hover:text-green-300"
+                asChild
               >
-                Read Article <ArrowRight className="h-3 w-3 ml-1" />
+                <Link href="{post.slug}">
+                  Read Article <ArrowRight className="h-3 w-3 ml-1" />
+                </Link>
               </Button>
             </CardFooter>
           </Card>
